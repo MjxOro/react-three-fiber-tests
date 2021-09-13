@@ -8,7 +8,7 @@ import { Points } from "./components/Sphere/Sphere"
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Canvas style={{height: "100vh",position: "fixed"}} camera={[3,3,3]}  >
+      <Canvas style={{height: "100vh",position: "fixed"}}>
         <Suspense fallback={null}>
           <Points />
         </Suspense>
