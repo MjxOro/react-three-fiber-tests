@@ -13,7 +13,7 @@ const App: React.FC = () => {
           <Points />
         </Suspense>
       </Canvas>
-      <h1 className='app__h1'> BOZO ALERT! </h1>
+      <h1 className='app__h1'> TORNADO ALERT! </h1>
     </div>
   );
 }
