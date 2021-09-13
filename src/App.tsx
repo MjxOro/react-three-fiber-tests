@@ -2,7 +2,7 @@ import React, { Suspense} from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import { Canvas } from "@react-three/fiber"
-import { Points } from "./components/Sphere/Sphere"
+import { Points } from "./components/Sphere/ObjectInit"
 
 
 const App: React.FC = () => {
