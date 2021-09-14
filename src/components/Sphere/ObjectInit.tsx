@@ -151,14 +151,17 @@ export const PointsScroll: React.FC = () => {
     //     points.current.rotation.y += 0.01
 
     // })
-    const [offsetY, setOffsetY] = useState<number>(0)
-    const handleScroll = () => setOffsetY(window.pageYOffset)
+    const [offsetY, setOffsetY] = useState<boolean>(false)
+    const handleScroll = () => setOffsetY(!offsetY)
     useEffect(() => {
         window.addEventListener("scroll", handleScroll)
-        points.current.rotation.y += offsetY * 0.001
         return () => window.removeEventListener("scroll", handleScroll)
     })
-    console.log(offsetY * 0.05)
+    const rotation = useSpring({
+        spinAnimation: offsetY ? Math.PI : 0,
+        config: { mass: 5, tension: 400, friction: 60, precision: 0.0001 }
+
+    });
 
     const count: number = 3000
 
@@ -180,7 +183,7 @@ export const PointsScroll: React.FC = () => {
 
         <>
             <ambientLight intensity={0.5} />
-            <points ref={points}>
+            <a.points ref={points} rotation-y={rotation.spinAnimation}>
                 <bufferGeometry attach="geometry">
                     <bufferAttribute
                         attachObject={['attributes', 'position']}
@@ -204,7 +207,7 @@ export const PointsScroll: React.FC = () => {
                     transparent
                     sizeAttenuation
                 />
-            </points>
+            </a.points>
         </>
 
 
