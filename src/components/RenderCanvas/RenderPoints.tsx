@@ -1,12 +1,12 @@
 import React, { Suspense } from 'react';
 import { Canvas } from "@react-three/fiber"
 import { Points, PointsSpin } from "../Sphere/ObjectInit"
-import { Header2 } from '../Header/Header';
+import { Header } from '../Header/Header';
 
 const RenderPoints: React.FC = () => {
 	return (
 		<>
-			<Header2 />
+			<Header />
 			<Canvas style={{ height: "100vh", position: "fixed" }}>
 				<Suspense fallback={null}>
 					<Points />

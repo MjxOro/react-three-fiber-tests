@@ -10,7 +10,13 @@
         color: bisque;
 
     }
+    &__nav{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
 		&__link{
+      margin-right: 2rem;
 			font-size: 1.5rem;
 			color:bisque;
 			text-decoration: none;
