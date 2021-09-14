@@ -4,7 +4,6 @@ import { a } from "@react-spring/three"
 import { useSpring } from "@react-spring/core"
 import { PointsProps, useFrame } from "@react-three/fiber"
 import { Ref } from "react"
-import { AirplanemodeActive, ThreeDRotation } from "@material-ui/icons"
 import { off } from "process"
 
 
