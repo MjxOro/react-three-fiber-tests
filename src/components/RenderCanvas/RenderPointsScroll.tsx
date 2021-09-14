@@ -12,7 +12,7 @@ const RenderPointsScroll: React.FC = () => {
           <PointsScroll />
         </Suspense>
       </Canvas>
-      <h1 className='app__h1'> Click to spin! </h1>
+      <h1 className='app__h1'> Scroll to spin! </h1>
     </>
   );
 }

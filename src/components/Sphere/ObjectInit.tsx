@@ -4,7 +4,6 @@ import { a } from "@react-spring/three"
 import { useSpring } from "@react-spring/core"
 import { PointsProps, useFrame } from "@react-three/fiber"
 import { Ref } from "react"
-import { off } from "process"
 
 
 export const SphereObj: React.FC = () => {
@@ -30,7 +29,7 @@ export const SphereObj: React.FC = () => {
 export const Points: React.FC = () => {
     const points = useRef<any>()
     useFrame(() => {
-        points.current.rotation.y += 0.01
+        points.current.rotation.y += 0.001
 
     })
     const count: number = 3000
