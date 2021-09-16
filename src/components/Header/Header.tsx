@@ -2,15 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./Header.scss"
 import { Link } from "react-router-dom"
 
-interface HeaderProps {
-    handleOpen: () => void
-    open: boolean
-
-}
 
 
-export const Header: React.FC = () => {
+export const Header: React.FC<any> = () => {
     const [open, setOpen] = useState<boolean>(false)
+
+
 
     const handleOpen = () => {
         if (!open) {

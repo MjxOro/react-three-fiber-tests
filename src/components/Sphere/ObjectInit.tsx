@@ -162,6 +162,7 @@ export const PointsScroll: React.FC = () => {
         config: { mass: 5, tension: 400, friction: 60, precision: 0.0001 }
 
     });
+    console.log(offsetY)
 
     const count: number = 3000
 

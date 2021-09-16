@@ -1,10 +1,27 @@
+*{
+    overflow: hidden;
+}
+
+
+
 .app{
     &__h1{
-        height: 100vh;
+        height: 95vh;
         margin: 0;
         color:bisque;
         display: flex;
         justify-content: center;
         align-items: center;
+        pointer-events: none;
+    }
+}
+.parallax{
+    &__text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+        font-size: 5rem;
+
     }
 }
